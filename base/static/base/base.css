@@ -1,14 +1,13 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;700&display=swap');
 
 body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
     display: flex;
     height: 100vh;
-    background-color: #ffffff;
 }
 
 .container {
@@ -17,157 +16,187 @@ body {
 }
 
 .sidebar {
-    width: 300px;
-    background-color: #F4F4F4;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-right: 1px solid #ddd;
+    width: 250px;
+    background-color: #f5f5f5;
     padding: 20px;
-    border-radius: 15px;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu h3, .menu h4 {
+    top: 40px;
+    left: 40px;
+    width: 258px;
+    height: 32px;
+    z-index: 23;
+    margin: 0 0 10px 0;
+    color: #444444ff;
     flex-grow: 1;
+    overflow: hidden;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: none;
+    text-align: left;
+    letter-spacing: 0px;
+    line-height: 32px;
+    white-space: pre-line;
+    word-break: break-word;
+    opacity: 1;
+    visibility: visible;
 }
 
-.menu input[type="text"] {
-    width: 100%;
-    padding: 10px;
+.search {
+    padding: 5px;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    width: calc(100% - 10px);
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
 
-.tasks, .lists, .tags {
-    margin-bottom: 20px;
+.tasks, .lists ul, .tags ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.task-item, .list-item, .tag {
+.tasks li, .lists ul li, .tags ul li {
     padding: 10px 0;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #ddd;
+}
+
+.tasks li:hover, .lists ul li:hover, .tags ul li:hover {
+    background-color: #eee;
     cursor: pointer;
 }
 
-.task-item .icon, .list-item .color {
-    margin-right: 10px;
+.badge {
+    color: #1E1F22;
+    padding: 3px 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    outline: none;
+    width: 56px;
+    height: 56px;
+    opacity: 1;
+    background-color: rgba(221, 221, 221, 0);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
+    border: 1px solid rgb(235, 235, 235)
 }
 
-.task-item.active {
-    background-color: #f0f0f0;
-    font-weight: bold;
-}
-
-.task-count, .list-count {
-    margin-left: auto;
-    background-color: #ddd;
-    padding: 3px 10px;
-    border-radius: 15px;
+.titlebadge {
+    color: #1E1F22;
+    padding: 3px 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    outline: none;
+    width: 56px;
+    height: 56px;
+    opacity: 1;
+    background-color: rgba(221, 221, 221, 0);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
+    border: 1px solid rgb(235, 235, 235);
+    margin-left: 10px
 }
 
 .tag {
     display: inline-block;
-    background-color: #ddd;
     padding: 5px 10px;
-    border-radius: 15px;
     margin-right: 5px;
-    margin-bottom: 5px;
+    border-radius: 3px;
+    color: #fff;
 }
 
-.add-new {
-    color: #007bff;
-    cursor: pointer;
+.tag1 {
+    background-color: #1e90ff;
 }
 
-.settings {
-    padding-top: 20px;
-    border-top: 1px solid #ddd;
+.tag2 {
+    background-color: #32cd32;
 }
 
-.setting-item {
-    padding: 10px 0;
-    cursor: pointer;
+.settings a {
+    display: block;
+    margin-top: 20px;
+    color: #000;
+    text-decoration: none;
 }
 
 .main-content {
-    flex-grow: 1;
-    background-color: #ffff;
+    flex: 1;
     padding: 20px;
-    margin: 20px;
+    background-color: #fff;
+    overflow-y: auto;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.header h1 {
-    font-size: 24px;
-}
-
-.task-list .task {
+.upcoming h2 {
     display: flex;
     align-items: center;
+    flex-grow: 1;
+    margin: 0px;
+    overflow: hidden;
+    font-size: 48px;
+    font-weight: 600;
+    text-transform: none;
+    text-align: left;
+    letter-spacing: -1px;
+    line-height: 56px;
+    white-space: pre-line;
+    word-break: break-word;
+    opacity: 1;
+    visibility: visible;
+    color: #212529ff;
+    top: 24px;
+    left: 378px;
+    width: 220px;
+    height: 56px;
+    z-index: 66;
+}
+
+.tasks-today, .tasks-tomorrow, .tasks-week {
+    margin-top: 20px;
+}
+
+.tasks-today h3, .tasks-tomorrow h3, .tasks-week h3 {
+    margin-bottom: 10px;
+}
+
+.tasks-today ul, .tasks-tomorrow ul, .tasks-week ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tasks-today li, .tasks-tomorrow li, .tasks-week li {
     padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-}
-
-.task-list .task input[type="checkbox"] {
-    margin-right: 10px;
-}
-
-.task-details {
-    margin-left: auto;
     display: flex;
     align-items: center;
 }
 
-.task-details span {
+.tasks-today li .label, .tasks-week li .label {
     margin-left: 10px;
-    padding: 2px 8px;
-    border-radius: 15px;
-    background-color: #f0f0f0;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 0.8em;
 }
 
-.task-details .date {
-    background-color: #d4edda;
+.schedule {
+    background-color: #ff6347;
+    color: #fff;
 }
 
-.task-details .subtasks {
-    background-color: #ffeeba;
-}
-
-.task-details .tag.personal {
-    background-color: #f8d7da;
-}
-
-.task-details .list {
-    background-color: #d1ecf1;
-}
-
-.list-item .color.personal {
-    background-color: #ff6b6b;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-}
-
-.list-item .color.work {
-    background-color: #6bcfff;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-}
-
-.list-item .color.list1 {
-    background-color: #ffd36b;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+.personal {
+    background-color: #32cd32;
+    color: #fff;
 }

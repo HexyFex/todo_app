@@ -1,96 +1,75 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta name="viewport" content="width=device-width, initial">
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabenverwaltung</title>
     <link rel="stylesheet" href="static/base/base.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="sidebar">
             <div class="menu">
-                <input type="text" placeholder="Search">
-                <div class="tasks">
-                    <div class="task-item">
-                        <span class="icon">⏰</span>
-                        Upcoming <span class="task-count">12</span>
-                    </div>
-                    <div class="task-item active">
-                        <span class="icon">📅</span>
-                        Today <span class="task-count">5</span>
-                    </div>
-                    <div class="task-item">
-                        <span class="icon">🗓️</span>
-                        Calendar
-                    </div>
-                    <div class="task-item">
-                        <span class="icon">📝</span>
-                        Sticky Wall
-                    </div>
-                </div>
+                <h3>Menu</h3>
+                <input type="text" placeholder="Suche" class="search">
+                <ul class="tasks">
+                    <li>Bevorstehend <span class="badge">12</span></li>
+                    <li>Heute <span class="badge">5</span></li>
+                    <li>Kalender</li>
+                    <li>Sticky Wall</li>
+                </ul>
                 <div class="lists">
-                    <div class="list-item">
-                        <span class="color personal"></span>
-                        Personal <span class="list-count">3</span>
-                    </div>
-                    <div class="list-item">
-                        <span class="color work"></span>
-                        Work <span class="list-count">6</span>
-                    </div>
-                    <div class="list-item">
-                        <span class="color list1"></span>
-                        List 1 <span class="list-count">3</span>
-                    </div>
-                    <div class="list-item add-new">+ Add New List</div>
+                    <h4>Listen</h4>
+                    <ul>
+                        <li>Persönlich</li>
+                        <li>Arbeit</li>
+                        <li>Liste 3</li>
+                        <li><a href="#">Neue Liste hinzufügen</a></li>
+                    </ul>
                 </div>
                 <div class="tags">
-                    <div class="tag">Tag 1</div>
-                    <div class="tag">Tag 2</div>
-                    <div class="tag add-new">+ Add Tag</div>
+                    <h4>Tags</h4>
+                    <ul>
+                        <li class="tag tag1">Tag 1</li>
+                        <li class="tag tag2">Tag 2</li>
+                        <li><a href="#">Tag hinzufügen</a></li>
+                    </ul>
                 </div>
-            </div>
-            <div class="settings">
-                <div class="setting-item">Settings</div>
-                <div class="setting-item">Sign out</div>
+                <div class="settings">
+                    <a href="#">Einstellungen</a>
+                    <a href="#">Abmelden</a>
+                </div>
             </div>
         </div>
         <div class="main-content">
-            <div class="header">
-                <h1>Today</h1>
-                <div class="task-count">5</div>
-            </div>
-            <div class="task-list">
-                <div class="task">
-                    <input type="checkbox">
-                    <span>Research content ideas</span>
+            <div class="upcoming">
+                <h2>Today<span class="titlebadge">{{ count }}</span></h2>
+                <div class="tasks-today">
+                    <h3>Heute</h3>
+                    <ul>
+                        <li><input type="checkbox"> Inhaltliche Ideen recherchieren</li>
+                        <li><input type="checkbox"> Datenbank von Gastautoren erstellen</li>
+                        <li><input type="checkbox"> Führerschein erneuern <span class="label schedule">Planen</span> <span class="label personal">Persönlich</span></li>
+                        <li><input type="checkbox"> Steuerberater konsultieren</li>
+                    </ul>
                 </div>
-                <div class="task">
-                    <input type="checkbox">
-                    <span>Create a database of guest authors</span>
+                <div class="tasks-tomorrow">
+                    <h3>Morgen</h3>
+                    <ul>
+                        <li><input type="checkbox"> Stellenausschreibung für SEO-Spezialist erstellen</li>
+                        <li><input type="checkbox"> Design-Assets für Landingpage anfordern</li>
+                    </ul>
                 </div>
-                <div class="task">
-                    <input type="checkbox">
-                    <span>Renew driver's license</span>
-                    <div class="task-details">
-                        <span class="date">22-03-22</span>
-                        <span class="subtasks">1 Subtasks</span>
-                        <span class="tag personal">Personal</span>
-                    </div>
-                </div>
-                <div class="task">
-                    <input type="checkbox">
-                    <span>Consult accountant</span>
-                    <div class="task-details">
-                        <span class="list">List 1</span>
-                        <span class="subtasks">3 Subtasks</span>
-                    </div>
-                </div>
-                <div class="task">
-                    <input type="checkbox">
-                    <span>Print business card</span>
+                <div class="tasks-week">
+                    <h3>Diese Woche</h3>
+                    <ul>
+                        <li><input type="checkbox"> Inhaltliche Ideen recherchieren</li>
+                        <li><input type="checkbox"> Datenbank von Gastautoren erstellen</li>
+                        <li><input type="checkbox"> Führerschein erneuern</li>
+                        <li><input type="checkbox"> Steuerberater konsultieren</li>
+                        <li><input type="checkbox"> Visitenkarte drucken</li>
+                    </ul>
                 </div>
             </div>
         </div>
