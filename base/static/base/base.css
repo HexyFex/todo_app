@@ -1,13 +1,173 @@
-h1, h2 {
-    font-family: "Lexend Deca", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-h1 i {
-    font-family: "Lexend Deca", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #F4F4F4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+    flex-grow: 1;
+}
+
+.menu input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.tasks, .lists, .tags {
+    margin-bottom: 20px;
+}
+
+.task-item, .list-item, .tag {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.task-item .icon, .list-item .color {
+    margin-right: 10px;
+}
+
+.task-item.active {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.task-count, .list-count {
+    margin-left: auto;
+    background-color: #ddd;
+    padding: 3px 10px;
+    border-radius: 15px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #ddd;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.add-new {
+    color: #007bff;
+    cursor: pointer;
+}
+
+.settings {
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.setting-item {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: #ffff;
+    padding: 20px;
+    margin: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.task-list .task {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.task-list .task input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.task-details {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.task-details span {
+    margin-left: 10px;
+    padding: 2px 8px;
+    border-radius: 15px;
+    background-color: #f0f0f0;
+}
+
+.task-details .date {
+    background-color: #d4edda;
+}
+
+.task-details .subtasks {
+    background-color: #ffeeba;
+}
+
+.task-details .tag.personal {
+    background-color: #f8d7da;
+}
+
+.task-details .list {
+    background-color: #d1ecf1;
+}
+
+.list-item .color.personal {
+    background-color: #ff6b6b;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.list-item .color.work {
+    background-color: #6bcfff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.list-item .color.list1 {
+    background-color: #ffd36b;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
 }
