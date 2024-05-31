@@ -13,13 +13,15 @@ body {
 .container {
     display: flex;
     width: 100%;
+    height: 70%;
 }
 
 .sidebar {
-    width: 300px;
-    background-color: #f5f5f5;
+    width: 240px;
+    background-color: #F4F4F4;
+    border-radius: 30px;
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
 
 .menu {
@@ -54,7 +56,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f9f9f9; /* Adjust the background color as needed */
     margin: 0;
 }
 
@@ -66,7 +67,7 @@ body {
     flex-shrink: 1;
     flex-grow: 1;
     align-self: stretch;
-    width: 298px;
+    width: 230px;
     height: 40px;
     opacity: 1;
     background-color: rgba(250, 250, 250, 0);
@@ -100,17 +101,31 @@ body {
 }
 
 
-.tasks {
+.tasks, .lists {
     list-style-type: none;
     padding: 0;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
-.tasks li, .lists ul li, .tags ul li {
+.tasks li, .lists ul li, .tags ul li, .lists li {
     padding: 10px 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Zentriert die Inhalte vertikal */
+    width: 186px;
+    height: 24px;
+    flex-grow: 1;
+    margin: 0px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0px;
+    line-height: 24px;
+    white-space: pre-line;
+    word-break: break-word;
+    opacity: 1;
+    visibility: visible;
 }
 
 .tasks li:hover, .lists ul li:hover, .tags ul li:hover {
@@ -118,7 +133,7 @@ body {
     cursor: pointer;
 }
 
-.tasks h2 {
+.tasks h2, .lists h2, .tags h2 {
     width: 278px;
     height: 16px;
     flex-grow: 1;
@@ -136,16 +151,16 @@ body {
     visibility: visible;
 }
 
-.tasks p {
+.tasks p, .lists p {
     width: 186px;
     height: 24px;
     flex-grow: 1;
     margin: 0px 0 0 10px; /* Fügt einen Abstand zwischen dem Icon und dem Text hinzu */
     overflow: hidden;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400; /* Dünnere Schriftart für <p> */
     text-transform: none;
-    text-align: left;
+    text-align: left; /* Stellt sicher, dass der Text linksbündig ist */
     letter-spacing: 0px;
     line-height: 24px;
     white-space: pre-line;
@@ -153,6 +168,23 @@ body {
     opacity: 1;
     visibility: visible;
     color: #444444ff;
+}
+
+.lists-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 1;
+    flex-grow: 1;
+    align-self: stretch;
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+    background-color: rgb(255, 107, 107);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
+    border: 0px;
 }
 
 .task-item {
@@ -285,3 +317,13 @@ body {
     background-color: #32cd32;
     color: #fff;
 }
+
+.thin-divider {
+    border: none; /* Entfernt den Standardrahmen */
+    height: 1px; /* Legt die Dicke des Trennstrichs fest */
+    background-color: #ccc; /* Farbe des Trennstrichs */
+    width: 100%; /* Legt die Breite des Trennstrichs fest */
+    margin-top: 20px; /* Fügt oben und unten Abstand hinzu */
+    margin-bottom: -20px;
+}
+
