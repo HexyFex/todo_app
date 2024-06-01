@@ -59,11 +59,6 @@
                 </li>
             </div>
 
-
-            <div>
-                <hr class="thin-divider">
-            </div>
-
             <!-- lists sidebar -->
             <div class="lists">
                 <h2>LISTS</h2>
@@ -93,10 +88,6 @@
                         </a>
                     </li>
                 </ul>
-            </div>
-
-            <div>
-                <hr class="thin-divider">
             </div>
 
             <!-- Tags sidebar -->
@@ -139,14 +130,30 @@
         <div class="upcoming">
             <h2>Today<span class="titlebadge">{{ count }}</span></h2>
             <div class="tasks-today">
-                <h3>Heute</h3>
-                <ul>
-                    <li><input type="checkbox"> Inhaltliche Ideen recherchieren</li>
-                    <li><input type="checkbox"> Datenbank von Gastautoren erstellen</li>
-                    <li><input type="checkbox"> Führerschein erneuern <span class="label schedule">Planen</span> <span
-                            class="label personal">Persönlich</span></li>
-                    <li><input type="checkbox"> Steuerberater konsultieren</li>
-                </ul>
+                <div class="task-container">
+                    <div class="add-container">
+                        <svg class="add-icon" viewBox="0 0 512 512">
+                            <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                        </svg>
+                        <input type="text" placeholder="Add a task">
+                    </div>
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <input type="checkbox" id="task1">
+                            <label for="task1">Task 1</label>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox" id="task2">
+                            <label for="task2">Task 2</label>
+                        </li>
+                        <li class="task-item">
+                            <input type="checkbox" id="task3">
+                            <label for="task3">Task 3</label>
+                        </li>
+                    </ul>
+                </div>
+
+
             </div>
             <div class="tasks-tomorrow">
                 <h3>Morgen</h3>

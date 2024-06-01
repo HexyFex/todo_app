@@ -367,13 +367,6 @@ body {
     color: #fff;
 }
 
-.thin-divider {
-    border: none;
-    height: 1px;
-    background-color: #ccc;
-    width: 100%;
-}
-
 /* Shared styles for lists and tasks */
 .shared-styles {
     font-size: 16px;
@@ -406,9 +399,11 @@ body {
     margin-bottom: 0px; /* Adjust this value to reduce the space between links */
 }
 
-.lists a:hover, .tasks a:hover {
-    background-color: #eee;
-    border-radius: 5px;
+/* Remove color change on hover */
+.lists li:hover,
+.tags li:hover, .tasks li:hover {
+    background-color: transparent;
+    border-radius: 0; /* Remove border-radius on hover */
 }
 
 .lists .task-item, .tasks .task-item {
@@ -451,3 +446,62 @@ body {
     z-index: 1;
     fill: rgb(124, 124, 124);
 }
+
+
+/* Add a divider between lists and tags */
+.lists, .tags {
+    border-top: thin solid #ebebeb; /* Thin border as a divider */
+    padding-top: 20px; /* Add some spacing between the sections */
+    padding-bottom: 20px }
+
+/* Optional: Adjust padding or margin to fine-tune the spacing */
+.tags {
+    margin-top: 10px; /* Adjust as needed */
+}
+
+.add-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Ändern Sie die Ausrichtung, um die Suche nach links auszurichten */
+    flex-grow: 1;
+    margin: 0px;
+    overflow: hidden;
+    font-size: 16px; /* Reduzieren Sie die Schriftgröße auf 16px */
+    color: #7c7c7cff; /* Ändern Sie die Schriftfarbe */
+    height: 40px; /* Setzen Sie die Höhe auf 40px */
+    background-color: rgba(250, 250, 250, 0); /* Hintergrundfarbe transparent setzen */
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
+    border: 1px solid rgb(235, 235, 235);
+    padding-left: 10px;
+}
+
+.add-container input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 16px; /* Schriftgröße auf 16px setzen */
+    color: #7c7c7cff; /* Schriftfarbe ändern */
+    margin-left: 10px;
+}
+
+.add-container input::placeholder {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px; /* Schriftgröße auf 16px setzen */
+    color: #7c7c7cff; /* Schriftfarbe ändern */
+}
+
+.add-icon {
+    fill: #ccc;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    overflow: visible;
+    opacity: 1;
+    z-index: 1;
+    fill: rgb(124, 124, 124);
+}
+
