@@ -7,6 +7,8 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
 }
 
@@ -51,14 +53,6 @@ body {
     visibility: visible;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
 .search-container {
     display: flex;
     flex-direction: row; /* Ändert die Ausrichtung auf horizontal */
@@ -100,14 +94,7 @@ body {
     margin-right: 10px; /* Optional, um den Abstand zum Eingabefeld zu steuern */
 }
 
-.tags ul {
-    display: flex; /* Use flexbox for horizontal alignment */
-    padding: 0; /* Remove default padding from the ul */
-    margin: 0; /* Remove default margin from the ul */
-    list-style-type: none; /* Remove default list style */
-}
-
-.tags div, tags a {
+.tags div {
     flex-grow: 1;
     margin: 0px;
     padding: 10px;
@@ -124,13 +111,49 @@ body {
     color: rgb(68, 68, 68);
 }
 
+.tags ul {
+    display: flex; /* Use flexbox for horizontal alignment */
+    padding: 0; /* Remove default padding from the ul */
+    margin: 0; /* Remove default margin from the ul */
+    list-style-type: none; /* Remove default list style */
+}
+
+.tags li {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    margin-right: 10px; /* Add right margin to space out items */
+}
+
+.tags a {
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Vertically center the content */
+    padding: 5px; /* Add padding around the text */
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent */
+    text-transform: none;
+    letter-spacing: 0px;
+    line-height: 24px;
+    white-space: pre-line;
+    word-break: break-word;
+    opacity: 1;
+    visibility: visible;
+    border: 1px solid transparent; /* Optional: Add border to see the padding effect */
+    border-radius: 5px; /* Optional: Add some border-radius for a better look */
+}
+
+.tags a:hover {
+    border-color: #ccc; /* Optional: Change border color on hover for better visibility */
+}
+
 .tasks, .lists {
     list-style-type: none;
     padding: 0;
     margin-top: 40px;
 }
 
-.tasks li, .lists ul li, .tags ul li, .lists li {
+.tasks li, .tags ul li, .lists li {
     padding: 10px 0;
     display: flex;
     align-items: center; /* Vertically center the content */
@@ -193,58 +216,7 @@ body {
     color: #444444ff;
 }
 
-.lists-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    flex-shrink: 1;
-    flex-grow: 1;
-    align-self: stretch;
-    width: 16px;
-    height: 16px;
-    opacity: 1;
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
-    border: 0px;
-}
-
-.lists-icon1 {
-    background-color: #FF6B6B;
-}
-
-.lists-icon2 {
-    background-color: #66D9E8;
-}
-
-.lists-icon3 {
-    background-color: #FFD43B;
-}
-
-.task-item {
-    display: flex;
-    align-items: center; /* Zentriert die Inhalte vertikal */
-}
-
-.badge {
-    color: #1E1F22;
-    padding: 3px 7px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    overflow: hidden;
-    outline: none;
-    width: 56px;
-    height: 56px;
-    opacity: 1;
-    background-color: rgba(221, 221, 221, 0);
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
-    border: 1px solid rgb(235, 235, 235)
-}
-
-.titlebadge {
+.badge, .titlebadge {
     color: #1E1F22;
     padding: 3px 7px;
     display: flex;
@@ -260,7 +232,10 @@ body {
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
     border: 1px solid rgb(235, 235, 235);
-    margin-left: 40px
+}
+
+.titlebadge {
+    margin-left: 40px;
 }
 
 .tag {
@@ -295,12 +270,24 @@ body {
     background-color: #EDEDED;
 }
 
+.settings {
+    margin: 10px 0; /* Add some margin between the settings items */
+}
 
-.settings a {
-    display: block;
-    margin-top: 20px;
-    color: #000;
-    text-decoration: none;
+.settings-item {
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Vertically center the content */
+    margin: 10px 0; /* Add some margin between the settings items */
+}
+
+.settings-item .icon {
+    width: 16px;
+    height: 16px;
+    overflow: visible;
+    opacity: 1;
+    z-index: 1;
+    fill: rgb(124, 124, 124);
+    margin-right: 8px; /* Add some space between the SVG and the text */
 }
 
 .main-content {
@@ -376,4 +363,71 @@ body {
     width: 100%; /* Legt die Breite des Trennstrichs fest */
     margin-top: 20px; /* Fügt oben und unten Abstand hinzu */
     margin-bottom: -20px;
+}
+
+.lists ul, .tasks ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lists li, .tasks li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Add some space between list items */
+}
+
+.lists .clickable, .tasks .clickable {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent */
+    width: 100%; /* Make the link take up the entire list item */
+    cursor: pointer; /* Pointer cursor for clickable items */
+}
+
+.lists .clickable:hover, .tasks .clickable:hover {
+    background-color: #eee; /* Optional: Change background color on hover */
+    border-radius: 5px; /* Optional: Add border radius for better look */
+}
+
+.lists .task-item, .tasks .task-item {
+    display: flex;
+    align-items: center;
+    padding: 10px; /* Add padding inside the task item */
+    width: 100%; /* Make the task item take up the entire link */
+}
+
+.lists .task-item p, .tasks .task-item p {
+    margin-left: 10px; /* Add space between icon and text */
+    font-size: 16px;
+    font-weight: 400;
+    color: #444444ff;
+}
+
+.lists-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.lists-icon1 {
+    background-color: #FF6B6B;
+}
+
+.lists-icon2 {
+    background-color: #66D9E8;
+}
+
+.lists-icon3 {
+    background-color: #FFD43B;
+}
+
+.task-icon {
+    width: 16px;
+    height: 16px;
+    overflow: visible;
+    opacity: 1;
+    z-index: 1;
+    fill: rgb(124, 124, 124);
 }
