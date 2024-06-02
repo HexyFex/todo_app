@@ -1,25 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;700&display=swap');
-
-body {
-    font-family: 'Lexend Deca', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    display: flex;
-    width: 100%;
-    height: 70%;
-}
-
 .sidebar {
-    width: 280px;
+    width: 270px;
     height: 80%;
     background-color: #F4F4F4;
     border-radius: 30px;
@@ -47,7 +27,7 @@ body {
     font-weight: 600;
     text-transform: none;
     text-align: left;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     line-height: 32px;
     white-space: pre-line;
     word-break: break-word;
@@ -68,7 +48,7 @@ body {
     opacity: 1;
     background-color: rgba(250, 250, 250, 0);
     border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0 0 0;
     border: 1px solid rgb(235, 235, 235);
     padding-left: 10px;
 }
@@ -98,14 +78,14 @@ body {
 
 .sidebar-tags div {
     flex-grow: 1;
-    margin: 0px;
+    margin: 0;
     padding: 10px;
     overflow: visible;
     font-size: 14px;
     font-weight: 600;
     text-transform: none;
     text-align: center;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     line-height: 18px;
     white-space: nowrap;
     opacity: unset;
@@ -135,7 +115,7 @@ body {
     text-decoration: none;
     color: inherit;
     text-transform: none;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     line-height: 14px;
     white-space: pre-line;
     word-break: break-word;
@@ -168,7 +148,7 @@ body {
     font-size: 16px;
     font-weight: 700;
     text-transform: none;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     line-height: 24px;
     white-space: pre-line;
     word-break: break-word;
@@ -185,13 +165,13 @@ body {
     width: 278px;
     height: 16px;
     flex-grow: 1;
-    margin: 0px;
+    margin: 0;
     overflow: hidden;
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
     text-align: left;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     line-height: 16px;
     white-space: pre-line;
     word-break: break-word;
@@ -213,7 +193,7 @@ body {
     opacity: 1;
     background-color: rgba(221, 221, 221, 0);
     border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0 0 0;
     border: 1px solid rgb(235, 235, 235);
 }
 
@@ -230,8 +210,8 @@ body {
     opacity: 1;
     background-color: transparent;
     border-radius: 6px;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
-    border: 0px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0 0 0;
+    border: 0;
     top: 618px;
     left: 114px;
     z-index: 55;
@@ -383,7 +363,7 @@ body {
 /* Add a divider between sidebar-lists and sidebar-tags */
 .sidebar-lists, .sidebar-tags {
     border-top: thin solid #ebebeb; /* Thin border as a divider */
-    padding-top: 20px; /* Add some spacing between the sections */
+    padding-top: 15px; /* Add some spacing between the sections */
     padding-bottom: 20px
 }
 
