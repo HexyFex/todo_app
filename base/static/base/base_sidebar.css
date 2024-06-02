@@ -283,22 +283,6 @@ body {
     margin-right: 8px; /* Add spacing between icon and text */
 }
 
-.main-content {
-    flex: 1;
-    padding: 20px;
-    background-color: #fff;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Shared styles for sidebar-lists and sidebar-tasks */
-.shared-styles {
-    font-size: 16px;
-    font-weight: 400;
-    color: #444444ff;
-    margin-left: 10px;
-}
 
 /* Reset list styles for .sidebar-lists ul and .sidebar-tasks ul */
 .sidebar-lists ul, .sidebar-tasks ul {

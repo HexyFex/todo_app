@@ -1,0 +1,44 @@
+.main-content {
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 20px; /* Add padding to create space around the content */
+    background-color: transparent; /* Set background color */
+}
+
+.main-content-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-content-title {
+    top: 24px;
+    left: 378px;
+    width: 250px;
+    height: 57px;
+    z-index: 18;
+}
+
+
+.main-content-title p {
+    width: 250px;
+    height: 57px;
+    flex-grow: 1;
+    margin: 0px;
+    overflow: hidden;
+    font-size: 48px;
+    font-weight: 600;
+    text-transform: none;
+    text-align: left;
+    letter-spacing: -1px;
+    line-height: 56px;
+    white-space: pre-line;
+    word-break: break-word;
+    opacity: 1;
+    visibility: visible;
+}
+
+.main-content-title span {
+    color: #212529ff
+}
