@@ -19,11 +19,13 @@ body {
 }
 
 .sidebar {
-    width: 240px;
+    width: 280px;
+    height: 80%;
     background-color: #F4F4F4;
     border-radius: 30px;
     padding: 20px;
     margin: 20px;
+    position: relative;
 }
 
 .menu {
@@ -134,7 +136,7 @@ body {
     color: inherit;
     text-transform: none;
     letter-spacing: 0px;
-    line-height: 24px;
+    line-height: 14px;
     white-space: pre-line;
     word-break: break-word;
     opacity: 1;
@@ -272,6 +274,9 @@ body {
 
 .settings {
     margin: 10px 0;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
 }
 
 .settings-item {
@@ -380,13 +385,24 @@ body {
 
 /* Stil für das Label */
 .task-item label {
-    display: flex;
-    align-items: center;
+    flex-grow: 1;
+    margin: 0px;
+    overflow: hidden;
+    font-size: 16px;
+    text-transform: none;
+    text-align: left;
+    letter-spacing: 0px;
+    line-height: 24px;
+    white-space: pre-line;
+    word-break: break-word;
+    opacity: 1;
+    visibility: visible;
+    color: #444444ff
 }
 
 /* Markierung, wenn die Checkbox aktiviert ist */
 .task-item input[type="checkbox"]:checked {
-    background-color: #fdfdfd;
+    background-color: #ffffff;
     color: #7b7b7b;
 }
 
@@ -396,23 +412,11 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 20px;
-    height: 20px;
-    background: white;
+    width: 10px;
+    height: 10px;
+    background: #7b7b7b;
     transform: translate(-50%, -50%) rotate(45deg);
     clip-path: polygon(14% 44%, 0% 66%, 50% 100%, 100% 20%, 82% 0%, 41% 70%);
-}
-
-
-
-.schedule {
-    background-color: #ff6347;
-    color: #fff;
-}
-
-.personal {
-    background-color: #32cd32;
-    color: #fff;
 }
 
 /* Shared styles for lists and tasks */
@@ -486,12 +490,25 @@ body {
     background-color: #FFD43B;
 }
 
+.task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
 /* Stil für die Checkbox */
 .task-item {
     position: relative;
     padding-right: 40px; /* Platz für das SVG-Icon */
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 
+.task-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
 
 /* Stil für die SVG-Icons */
 .task-item .task-icon {
@@ -501,10 +518,7 @@ body {
     opacity: 1;
     z-index: 1;
     fill: rgb(124, 124, 124);
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-right: 8px;
 }
 
 
