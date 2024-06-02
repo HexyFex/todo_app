@@ -28,12 +28,12 @@ body {
     position: relative;
 }
 
-.menu {
+.sidebar-menu {
     display: flex;
     flex-direction: column;
 }
 
-.menu h3, .menu h4 {
+.sidebar-menu h3, .sidebar-menu h4 {
     top: 40px;
     left: 40px;
     width: 258px;
@@ -55,7 +55,7 @@ body {
     visibility: visible;
 }
 
-.search-container {
+.sidebar-search-container {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -73,7 +73,7 @@ body {
     padding-left: 10px;
 }
 
-.search-container input {
+.sidebar-search-container input {
     border: none;
     background-color: transparent;
     outline: none;
@@ -83,7 +83,7 @@ body {
     margin-left: 10px;
 }
 
-.search-container input::placeholder {
+.sidebar-search-container input::placeholder {
     border: none;
     background-color: transparent;
     outline: none;
@@ -91,12 +91,12 @@ body {
     color: #7c7c7cff;
 }
 
-.search-icon {
+.sidebar-search-icon {
     fill: #ccc;
     margin-right: 10px;
 }
 
-.tags div {
+.sidebar-tags div {
     flex-grow: 1;
     margin: 0px;
     padding: 10px;
@@ -113,20 +113,20 @@ body {
     color: rgb(68, 68, 68);
 }
 
-.tags ul {
+.sidebar-tags ul {
     display: flex;
     padding: 0;
     margin: 0;
     list-style-type: none;
 }
 
-.tags li {
+.sidebar-tags li {
     display: flex;
     align-items: center;
     margin-right: 10px;
 }
 
-.tags a {
+.sidebar-tags a {
     display: flex;
     align-items: center;
     padding: 5px;
@@ -145,17 +145,17 @@ body {
     border-radius: 5px;
 }
 
-.tags a:hover {
+.sidebar-tags a:hover {
     border-color: #ccc;
 }
 
-.tasks, .lists {
+.sidebar-tasks, .sidebar-lists {
     list-style-type: none;
     padding: 0;
     margin-top: 40px;
 }
 
-.tasks li, .tags ul li, .lists li {
+.sidebar-tasks li, .sidebar-tags ul li, .sidebar-lists li {
     padding: 10px 0;
     display: flex;
     align-items: center;
@@ -176,12 +176,12 @@ body {
     visibility: visible;
 }
 
-.tasks li:hover, .lists ul li:hover, .tags ul li:hover {
+.sidebar-tasks li:hover, .sidebar-lists ul li:hover, .sidebar-tags ul li:hover {
     background-color: #eee;
     cursor: pointer;
 }
 
-.tasks h2, .lists h2, .tags h2 {
+.sidebar-tasks h2, .sidebar-lists h2, .sidebar-tags h2 {
     width: 278px;
     height: 16px;
     flex-grow: 1;
@@ -199,26 +199,7 @@ body {
     visibility: visible;
 }
 
-.tasks p, .lists p {
-    width: 186px;
-    height: 24px;
-    flex-grow: 1;
-    margin: 0px 0 0 10px;
-    overflow: hidden;
-    font-size: 16px;
-    font-weight: 400;
-    text-transform: none;
-    text-align: left;
-    letter-spacing: 0px;
-    line-height: 24px;
-    white-space: pre-line;
-    word-break: break-word;
-    opacity: 1;
-    visibility: visible;
-    color: #444444ff;
-}
-
-.badge, .titlebadge {
+.menu-badge {
     color: #1E1F22;
     padding: 3px 7px;
     display: flex;
@@ -234,10 +215,6 @@ body {
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
     border: 1px solid rgb(235, 235, 235);
-}
-
-.titlebadge {
-    margin-left: 40px;
 }
 
 .tag {
@@ -311,115 +288,11 @@ body {
     padding: 20px;
     background-color: #fff;
     overflow-y: auto;
-}
-
-.upcoming h2 {
     display: flex;
-    align-items: center;
-    flex-grow: 1;
-    margin: 0px;
-    overflow: hidden;
-    font-size: 48px;
-    font-weight: 600;
-    text-transform: none;
-    text-align: left;
-    letter-spacing: -1px;
-    line-height: 56px;
-    white-space: pre-line;
-    word-break: break-word;
-    opacity: 1;
-    visibility: visible;
-    color: #212529ff;
-    top: 24px;
-    left: 378px;
-    height: 56px;
-    z-index: 66;
+    flex-direction: column;
 }
 
-.tasks-today, .tasks-tomorrow, .tasks-week {
-    margin-top: 20px;
-}
-
-.tasks-today h3, .tasks-tomorrow h3, .tasks-week h3 {
-    margin-bottom: 10px;
-}
-
-.tasks-today ul, .tasks-tomorrow ul, .tasks-week ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.tasks-today li, .tasks-tomorrow li, .tasks-week li {
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-}
-
-.tasks-today li .label, .tasks-week li .label {
-    margin-left: 10px;
-    padding: 2px 5px;
-    border-radius: 3px;
-    font-size: 0.8em;
-}
-
-/* Stil für die Checkbox */
-.task-item input[type="checkbox"] {
-    appearance: none; /* Entfernt das standardmäßige Checkbox-Styling */
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
-    cursor: pointer;
-    position: relative;
-    outline: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    width: 16px;
-    height: 16px;
-    opacity: 1;
-    pointer-events: auto;
-    color: rgba(124, 124, 124, 0);
-    background-color: rgba(235, 235, 235, 0);
-    border-radius: 4px;
-    border: 1px solid rgb(221, 221, 221);
-}
-
-/* Stil für das Label */
-.task-item label {
-    flex-grow: 1;
-    margin: 0px;
-    overflow: hidden;
-    font-size: 16px;
-    text-transform: none;
-    text-align: left;
-    letter-spacing: 0px;
-    line-height: 24px;
-    white-space: pre-line;
-    word-break: break-word;
-    opacity: 1;
-    visibility: visible;
-    color: #444444ff
-}
-
-/* Markierung, wenn die Checkbox aktiviert ist */
-.task-item input[type="checkbox"]:checked {
-    background-color: #ffffff;
-    color: #7b7b7b;
-}
-
-/* Zusätzliche Pseudo-Elemente für das Häkchen */
-.task-item input[type="checkbox"]:checked::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 10px;
-    height: 10px;
-    background: #7b7b7b;
-    transform: translate(-50%, -50%) rotate(45deg);
-    clip-path: polygon(14% 44%, 0% 66%, 50% 100%, 100% 20%, 82% 0%, 41% 70%);
-}
-
-/* Shared styles for lists and tasks */
+/* Shared styles for sidebar-lists and sidebar-tasks */
 .shared-styles {
     font-size: 16px;
     font-weight: 400;
@@ -427,45 +300,22 @@ body {
     margin-left: 10px;
 }
 
-/* Reset list styles for .lists ul and .tasks ul */
-.lists ul, .tasks ul {
+/* Reset list styles for .sidebar-lists ul and .sidebar-tasks ul */
+.sidebar-lists ul, .sidebar-tasks ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-.lists li, .tasks li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
 
-/* Shared styles for .lists a and .tasks a */
-.lists li, .tasks li {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-    width: 100%;
-    cursor: pointer;
-    margin-bottom: 0px; /* Adjust this value to reduce the space between links */
-}
-
-/* Remove color change on hover */
-.lists li:hover,
-.tags li:hover, .tasks li:hover {
-    background-color: transparent;
-    border-radius: 0; /* Remove border-radius on hover */
-}
-
-.lists .task-item, .tasks .task-item {
+.sidebar-lists .task-item, .sidebar-tasks .task-item {
     display: flex;
     align-items: center;
     padding: 10px;
     width: 100%;
 }
 
-.lists .task-item p, .tasks .task-item p {
+.sidebar-lists .task-item p, .sidebar-tasks .task-item p {
     margin-left: 10px;
     font-size: 16px;
     font-weight: 400;
@@ -491,17 +341,20 @@ body {
 }
 
 .task-list {
-    list-style-type: none;
+    list-style: none;
+    margin: 0;
     padding: 0;
 }
+
 
 /* Stil für die Checkbox */
 .task-item {
     position: relative;
     padding-right: 40px; /* Platz für das SVG-Icon */
     border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-    margin-bottom: 5px;
+    padding-bottom: 10px; /* Abstand zum nächsten Task */
+    display: flex;
+    align-items: center;
 }
 
 .task-item:last-child {
@@ -510,73 +363,47 @@ body {
     margin-bottom: 0;
 }
 
+/* Optional: Anpassung des Hintergrunds beim Hover */
+.task-item:hover {
+    background-color: #f9f9f9; /* Hintergrundfarbe ändern */
+}
+
+.task-label {
+    top: 192px;
+    left: 1376px;
+    width: 16px;
+    height: 16px;
+    z-index: 74;
+    margin-right: 20px; /* Anpassen je nach Bedarf */
+    flex-grow: 1; /* Fülle den verfügbaren Platz */
+    font-size: 16px; /* Schriftgröße anpassen */
+}
+
+.task-icon {
+    width: 16px;
+    height: 16px;
+    fill: #ccc; /* Farbe des Icons */
+}
+
 /* Stil für die SVG-Icons */
-.task-item .task-icon {
+.task-item svg {
     width: 16px;
     height: 16px;
     overflow: visible;
     opacity: 1;
     z-index: 1;
     fill: rgb(124, 124, 124);
-    margin-right: 8px;
 }
 
 
-/* Add a divider between lists and tags */
-.lists, .tags {
+/* Add a divider between sidebar-lists and sidebar-tags */
+.sidebar-lists, .sidebar-tags {
     border-top: thin solid #ebebeb; /* Thin border as a divider */
     padding-top: 20px; /* Add some spacing between the sections */
     padding-bottom: 20px
 }
 
 /* Optional: Adjust padding or margin to fine-tune the spacing */
-.tags {
+.sidebar-tags {
     margin-top: 10px; /* Adjust as needed */
 }
-
-.add-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Ändern Sie die Ausrichtung, um die Suche nach links auszurichten */
-    flex-grow: 1;
-    margin: 0px;
-    overflow: hidden;
-    font-size: 16px; /* Reduzieren Sie die Schriftgröße auf 16px */
-    color: #7c7c7cff; /* Ändern Sie die Schriftfarbe */
-    height: 40px; /* Setzen Sie die Höhe auf 40px */
-    background-color: rgba(250, 250, 250, 0); /* Hintergrundfarbe transparent setzen */
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
-    border: 1px solid rgb(235, 235, 235);
-    padding-left: 10px;
-}
-
-.add-container input {
-    border: none;
-    background-color: transparent;
-    outline: none;
-    width: 100%;
-    font-size: 16px; /* Schriftgröße auf 16px setzen */
-    color: #7c7c7cff; /* Schriftfarbe ändern */
-    margin-left: 10px;
-}
-
-.add-container input::placeholder {
-    border: none;
-    background-color: transparent;
-    outline: none;
-    font-size: 16px; /* Schriftgröße auf 16px setzen */
-    color: #7c7c7cff; /* Schriftfarbe ändern */
-}
-
-.add-icon {
-    fill: #ccc;
-    margin-right: 10px;
-    width: 16px;
-    height: 16px;
-    overflow: visible;
-    opacity: 1;
-    z-index: 1;
-    fill: rgb(124, 124, 124);
-}
-

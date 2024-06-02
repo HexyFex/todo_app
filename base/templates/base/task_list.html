@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aufgabenverwaltung</title>
-    <link rel="stylesheet" href="static/base/base.css">
+    <link rel="stylesheet" href="static/base/base_sidebar.css">
+    <link rel="stylesheet" href="static/base/base_main_content.css">
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;700&display=swap"
           rel="stylesheet">
 </head>
@@ -12,9 +13,9 @@
 
 <div class="container">
     <div class="sidebar">
-        <div class="menu">
+        <div class="sidebar-menu">
             <h3>Menu</h3>
-            <div class="search-container">
+            <div class="sidebar-search-container">
                 <svg style="width: 16px; height: 16px; overflow: visible; opacity: 1; z-index: 1; fill: rgb(124, 124, 124);"
                      viewBox="0 0 512 512">
                     <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
@@ -23,7 +24,7 @@
             </div>
 
             <!-- tasks sidebar -->
-            <div class="tasks">
+            <div class="sidebar-tasks">
                 <h2>TASKS</h2>
                 <li>
                     <div class="task-item clickable">
@@ -60,7 +61,7 @@
             </div>
 
             <!-- lists sidebar -->
-            <div class="lists">
+            <div class="sidebar-lists">
                 <h2>LISTS</h2>
                 <ul>
                     <li>
@@ -91,7 +92,7 @@
             </div>
 
             <!-- Tags sidebar -->
-            <div class="tags">
+            <div class="sidebar-tags">
                 <h2>TAGS</h2>
                 <ul>
                     <li class="tag">
@@ -128,71 +129,9 @@
     </div>
 
     <div class="main-content">
-        <div class="upcoming">
-            <h2>Today<span class="titlebadge">{{ count }}</span></h2>
-            <div class="tasks-today">
-                <div class="task-container">
-                    <div class="add-container">
-                        <svg class="add-icon" viewBox="0 0 512 512">
-                            <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
-                        </svg>
-                        <input type="text" placeholder="Add a task">
-                    </div>
-                    <ul class="task-list">
-                        <li class="task-item">
-                            <input type="checkbox" id="task1">
-                            <label for="task1">
-                                Research content ideas
-                                <svg class="task-icon" viewBox="0 0 320 512">
-                                    <path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path>
-                                </svg>
-                            </label>
-                        </li>
-                        <li class="task-item">
-                            <input type="checkbox" id="task2">
-                            <label for="task2">
-                                Create a database for guest authors and users
-                                <svg class="task-icon" viewBox="0 0 320 512">
-                                    <path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path>
-                                </svg>
-                            </label>
-                        </li>
-                        <li class="task-item">
-                            <input type="checkbox" id="task3">
-                            <label for="task3">
-                                Renew driver's license
-                                <svg class="task-icon" viewBox="0 0 320 512">
-                                    <path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path>
-                                </svg>
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-
-
-            </div>
-
-
-            <div class="tasks-tomorrow">
-                <h3>Morgen</h3>
-                <ul>
-                    <li><input type="checkbox"> Stellenausschreibung für SEO-Spezialist erstellen</li>
-                    <li><input type="checkbox"> Design-Assets für Landingpage anfordern</li>
-                </ul>
-            </div>
-            <div class="tasks-week">
-                <h3>Diese Woche</h3>
-                <ul>
-                    <li><input type="checkbox"> Inhaltliche Ideen recherchieren</li>
-                    <li><input type="checkbox"> Datenbank von Gastautoren erstellen</li>
-                    <li><input type="checkbox"> Führerschein erneuern</li>
-                    <li><input type="checkbox"> Steuerberater konsultieren</li>
-                    <li><input type="checkbox"> Visitenkarte drucken</li>
-                </ul>
-            </div>
+        <div class="today">
         </div>
     </div>
 </div>
-
 </body>
 </html>
