@@ -108,7 +108,7 @@
     margin: 0 10px; /* Add 10px margin to the left and right */
 }
 
-.addNewTaskContainer div {
+.addNewTaskContainer .create-task {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -120,7 +120,7 @@
     border: 1px solid rgb(235, 235, 235);
 }
 
-.addNewTaskContainer input[type="text"] {
+.addNewTaskContainer a {
     flex-grow: 1;
     border: none;
     outline: none;
@@ -135,3 +135,5 @@
     height: 16px;
     fill: rgb(124, 124, 124);
 }
+
+
